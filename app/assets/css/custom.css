@@ -1,0 +1,77 @@
+/* line 1, sass/_typography.sass */
+html {
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+/* line 4, sass/_typography.sass */
+body {
+  font-size: 1.6rem;
+}
+
+/* line 6, sass/_typography.sass */
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak {
+  display: none !important;
+}
+
+/* line 13, sass/_typography.sass */
+p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.6em;
+  margin: 0.8em 0 1.6em;
+}
+
+/* line 19, sass/_typography.sass */
+a {
+  text-decoration: none;
+  font-weight: 400;
+}
+
+/* line 3, sass/_nav.sass */
+.site-sidenav,
+.site-sidenav.md-locked-open-add-active,
+.site-sidenav.md-locked-open {
+  background-color: #ffc107;
+  width: 250px;
+  min-width: 250px;
+  max-width: 250px;
+}
+
+/* line 10, sass/_nav.sass */
+.nav-header {
+  background-color: #ffc107;
+  flex-shrink: 0;
+  z-index: 2;
+}
+/* line 14, sass/_nav.sass */
+.nav-header .logo {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+/* line 20, sass/_nav.sass */
+.nav-header .logo img {
+  width: 250px;
+  height: 250px;
+}
+/* line 23, sass/_nav.sass */
+.nav-header .logo h1 {
+  color: white;
+  text-align: center;
+  font-weight: 400;
+  font-size: 26px;
+}
+
+/* line 29, sass/_nav.sass */
+.md-toolbar-tools .fa {
+  color: #fff;
+}

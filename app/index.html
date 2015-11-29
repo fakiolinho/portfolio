@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="starterApp" ng-controller="AppController as app">
+
+<head>
+	<title ng-bind="title">Fakiolas Marios | Welcome</title>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+	<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic'>
+	<link rel="stylesheet" href="./bower_components/angular-material/angular-material.css" />
+	<link rel="stylesheet" href="./bower_components/font-awesome/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="assets/css/custom.css" />
+	<link rel="stylesheet" href="assets/app.css" />
+</head>
+
+<body layout="row" ng-cloak>
+
+	<md-sidenav layout="column" class="site-sidenav md-sidenav-right md-whiteframe-z2" md-component-id="right" md-is-locked-open="$mdMedia('gt-md')">
+		<header class="nav-header">
+			<a href="#/" class="logo">
+				<img src="assets/images/avatar.jpg" alt="" />
+				<h1>Fakiolas Marios</h1>
+			</a>
+		</header>
+		<md-list>
+			<md-list-item ng-repeat="page in app.pages">
+				<a ng-href="{{ '#' + page.path }}" md-button ng-click="app.toggleSidenav('right')" ng-class="{'active' : app.isCurrentPath(page.path)}">
+				{{ page.title }}
+			</a>
+				<md-divider></md-divider>
+			</md-list-item>
+		</md-list>
+
+	</md-sidenav>
+
+	<div class="flex md-layout-column">
+		<md-toolbar class="md-whiteframe-z1" layout="row">
+			<div class="md-toolbar-tools">
+				<h1>Fakiolas Marios</h1>
+				<span flex></span>
+				<a href="https://gr.linkedin.com/in/marios-fakiolas-05a25747" target="_blank" class="md-icon-button" md-button><md-tooltip>LinkedIn</md-tooltip><i class="fa fa-linkedin"></i></a>
+				<a href="https://twitter.com/fakiolinho" target="_blank" class="md-icon-button" md-button><md-tooltip>Twitter</md-tooltip><i class="fa fa-twitter"></i></a>
+				<a href="https://github.com/fakiolinho" target="_blank" class="md-icon-button" md-button><md-tooltip>Github</md-tooltip><i class="fa fa-github"></i></a>
+				<!-- <a ng-href="{{ '#' + page.path }}" md-button ng-class="{'active' : app.isCurrentPath(page.path)}" ng-repeat="page in app.pages" hide-sm>
+				{{ page.title }}
+			</a> -->
+				<md-button ng-click="app.toggleSidenav('right')" hide-gt-sm class="md-icon-button">
+					<md-icon aria-label="Menu" md-svg-icon="https://s3-us-west-2.amazonaws.com/s.cdpn.io/68133/menu.svg"></md-icon>
+				</md-button>
+			</div>
+		</md-toolbar>
+
+		<md-content ng-view layout-padding></md-content>
+	</div>
+
+	<script src="./bower_components/angular/angular.js"></script>
+	<script src="./bower_components/angular-route/angular-route.js"></script>
+	<script src="./bower_components/angular-animate/angular-animate.js"></script>
+	<script src="./bower_components/angular-aria/angular-aria.js"></script>
+	<script type="text/javascript" src="./bower_components/angular-material/angular-material.js"></script>
+
+	<script src="./src/app.js"></script>
+	<script src="./src/controllers/AppController.js"></script>
+	<script src="./src/controllers/HomeController.js"></script>
+	<script src="./src/controllers/AboutController.js"></script>
+	<script src="./src/controllers/ProjectsController.js"></script>
+	<script src="./src/controllers/ProjectController.js"></script>
+	<script src="./src/controllers/ContactController.js"></script>
+	<script src="./src/users/Users.js"></script>
+	<script src="./src/users/UserController.js"></script>
+	<script src="./src/users/UserController.js"></script>
+	<script src="./src/users/UserService.js"></script>
+
+	<script src="./src/services/ProjectService.js"></script>
+
+</body>
+
+</html>
